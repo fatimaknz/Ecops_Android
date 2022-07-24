@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView_complaintList_complainLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Complaint"
+            android:textColor="#262626"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_complaintList_complaintDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content"
+            android:textColor="#262626"
+            app:layout_constraintTop_toBottomOf="@+id/textView_complaintList_complainLabel" />
+
+        <TextView
+            android:id="@+id/textView_complaintList_complainantLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Complainant Name"
+            android:textColor="#262626"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_complaintList_complaintDetail" />
+
+        <TextView
+            android:id="@+id/textView_complaintList_complainantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem Ipsum Amat"
+            android:textColor="#262626"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/textView_complaintList_complainantLabel" />
+
+        <TextView
+            android:id="@+id/textView_complaintList_addressLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Complainant Address"
+            android:textColor="#262626"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_complaintList_complainantName" />
+
+
+        <TextView
+            android:id="@+id/textView_complaintList_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Lorem Ipsum Amat"
+            android:textColor="#262626"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/textView_complaintList_addressLabel" />
+
+        <TextView
+            android:id="@+id/textView_complaintList_statusLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Status: "
+            android:textColor="#262626"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_complaintList_address" />
+
+        <TextView
+            android:id="@+id/textView_complaintList_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Pending "
+            android:textColor="#262626"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/textView_complaintList_statusLabel"
+            app:layout_constraintTop_toBottomOf="@+id/textView_complaintList_address" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

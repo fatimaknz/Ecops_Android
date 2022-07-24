@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">E-Cops</string>
+    <string name="aadhaar_hint">Enter Aadhaar Number</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

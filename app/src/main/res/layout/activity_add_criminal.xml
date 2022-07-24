@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddCriminalActivity">
+
+    <include
+        android:id="@+id/addCriminal_toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/button_addCriminal"
+        app:layout_constraintTop_toBottomOf="@id/addCriminal_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_addCriminal_imageContainer"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/imageView_addCriminal_profilePhoto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:elevation="4dp"
+                android:src="@drawable/ic_person_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView_addCriminal_editPhoto"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:elevation="10dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_camera_alt_black"
+                app:layout_constraintBottom_toBottomOf="@id/cardView_addCriminal_imageContainer"
+                app:layout_constraintEnd_toEndOf="@id/cardView_addCriminal_imageContainer"
+                app:layout_constraintTop_toTopOf="@id/cardView_addCriminal_imageContainer"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_addCriminal_aadhaarNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/aadhaar_hint"
+                app:layout_constraintTop_toBottomOf="@id/cardView_addCriminal_imageContainer">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_addCriminal_aadhaarNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_addCriminal_fir"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="FIR No"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout_addCriminal_aadhaarNumber">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_addCriminal_fir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_addCriminal_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Enter Name"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout_addCriminal_fir">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_addCriminal_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_addCriminal_address"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Enter Address"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout_addCriminal_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_addCriminal_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="start" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView_addCriminal_genderLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Gender"
+                android:textColor="#262626"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout_addCriminal_address" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_addCriminal_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-3dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/textView_addCriminal_genderLabel">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radioButton_addCriminal_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:checked="true"
+                    android:text="Male" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radioButton_addCriminal_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:text="Female" />
+
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_addCriminal_dateOfBirth"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Enter DOB in dd/MM/yyyy format"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup_addCriminal_gender">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_addCriminal_dateOfBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_addCriminal_weight"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Enter weight in kg"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout_addCriminal_dateOfBirth">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_addCriminal_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_addCriminal_height"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Enter Height in cm"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout_addCriminal_weight">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_addCriminal_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView_addCriminal_districtLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="District"
+                android:textColor="#262626"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout_addCriminal_height" />
+
+            <Spinner
+                android:id="@+id/spinner_addCriminal_district"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/spinner_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_addCriminal_districtLabel" />
+
+            <TextView
+                android:id="@+id/textView_addCriminal_districtError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Please select district"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_addCriminal_district" />
+
+            <TextView
+                android:id="@+id/textView_addCriminal_PoliceStationLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Police Station"
+                android:textColor="#262626"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView_addCriminal_districtError" />
+
+            <Spinner
+                android:id="@+id/spinner_addCriminal_policeStation"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/spinner_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_addCriminal_PoliceStationLabel" />
+
+            <TextView
+                android:id="@+id/textView_addCriminal_policeStationError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Please select Police Station"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_addCriminal_policeStation" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_addCriminal_crimeDetail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Describe Crime"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_addCriminal_policeStationError">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_addCriminal_crimeDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="start" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_addCriminal_dateOfCrime"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Enter Date of Crime in dd/MM/yyyy format"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout_addCriminal_crimeDetail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_addCriminal_dateOfCrime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_addCriminal"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="addCriminal"
+        android:text="ADD Criminal"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

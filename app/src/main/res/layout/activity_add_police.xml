@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddPoliceActivity">
+
+    <include
+        android:id="@+id/addPolice_toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_addPolice"
+        app:layout_constraintTop_toBottomOf="@id/addPolice_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_addPolice_aadhaarNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/aadhaar_hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_addPolice_aadhaarNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_addPolice_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Enter Name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout_addPolice_aadhaarNumber">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_addPolice_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_addPolice_designation"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Enter Designation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout_addPolice_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_addPolice_designation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_addPolice_age"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Enter Age"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout_addPolice_designation">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_addPolice_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_addPolice_userName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Enter Username"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout_addPolice_age">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_addPolice_userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_addPolice_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Enter Password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayout_addPolice_userName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText_addPolice_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView_addPolice_districtLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="District"
+                android:textColor="#262626"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout_addPolice_password" />
+
+            <Spinner
+                android:id="@+id/spinner_addPolice_district"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/spinner_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_addPolice_districtLabel" />
+
+            <TextView
+                android:id="@+id/textView_addPolice_districtError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Please select district"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_addPolice_district" />
+
+            <TextView
+                android:id="@+id/textView_addPolice_PoliceStationLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Police Station"
+                android:textColor="#262626"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/textView_addPolice_districtError" />
+
+            <Spinner
+                android:id="@+id/spinner_addPolice_policeStation"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/spinner_border"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_addPolice_PoliceStationLabel" />
+
+            <TextView
+                android:id="@+id/textView_addPolice_policeStationError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Please select Police Station"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_addPolice_policeStation" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_addPolice"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="addPolice"
+        android:text="ADD POLICE"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
